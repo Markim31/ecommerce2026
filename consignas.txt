@@ -24,7 +24,7 @@ Multimedia: deberá incluir archivos multimedia (imagenes, video o iframe) corre
 
 Lista de navegación: Implementar una lista desordenada con enlaces que simulen una navegación interna (Inicio, Productos, Contacto, etc.)
 
-
+Se agrego un carrito para los productos a comprar para sumar, restar y mostrar el total, ademas de vaciarlo en caso de desistir la compra
 
 El proyecto debe estar subido a un hosting gratuito (Netlify o GitHub Pages), con una URL funcional para visualizar el sitio.
 Repositorio de GitHub
