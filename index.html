@@ -16,193 +16,247 @@
         <header>
             <nav class="navbar">
                 <div class="nav-logo"> <span>PhoneStore</span>
+            <img src="https://img.icons8.com/han<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Store - Celulares</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-logo">
+            <span>PhoneStore</span>
             <img src="https://img.icons8.com/hands/100/cell-phone.png" alt="Logo">
-          
-        </div>       
-                        
-               <!-- Lista de Navegación -->
+        </div>
+
         <ul class="nav-links">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#productos">Productos</a></li>
             <li><a href="#resenas">Reseñas</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
+
         <div class="nav-actions">
             <div class="auth-links">
                 <a href="#login" class="btn-login">Iniciar Sesión</a>
                 <a href="#register" class="btn-register">Registrarse</a>
             </div>
             <div class="cart-container">
-                <a href="#carrito" class="cart-icon">
+                <a href="#" class="cart-icon" id="cart-btn">
                     <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
+                    <span class="cart-count" id="cart-count">0</span>
                 </a>
+
+                <div class="cart-dropdown" id="cart-dropdown">
+                    <h3>Tu Carrito</h3>
+                    <div id="cart-items">
+                        <p class="cart-empty">El carrito está vacío</p>
+                    </div>
+                    <div class="cart-total">
+                        <strong>Total:</strong> $<span id="cart-total-val">0.00</span>
+                    </div>
+                    <button id="clear-cart" class="btn-clear">Vaciar Carrito</button>
+                </div>
             </div>
         </div>
-    </nav>
-        </header>
-          
-        
-        <a href="#" class="btn-up">
-            <span class="flecha">↑</span>
-            <span>Subir</span>
-        </a>
-        <header id="inicio"> </header>
     </header>
-    <section id="productos">
-    <main class="catalogo-container">
-        <article class="producto-card">
-            <div class="imagen-wrapper">
-                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=500" alt="Smartphone 1">
-            </div>
-            <div class="info">
-                <h3>Samsung Galaxy S23</h3>
-                <p class="precio">$899.00</p>
-                <button>Ver detalles</button>
-                 <button>Comprar</button>
-            </div>
-        </article>
 
-        <article class="producto-card">
-            <div class="imagen-wrapper">
-                <img src="https://images.unsplash.com/photo-1592890288564-76628a30a657?q=80&w=500" alt="Smartphone 2">
-            </div>
-            <div class="info">
-                <h3>iPhone 15 Pro</h3>
-                <p class="precio">$999.00</p>
-                <button>Ver detalles</button>
-                 <button>Comprar</button>
-            </div>
-        </article>
+    <a href="#" class="btn-up">
+        <span class="flecha">↑</span>
+        <span>Subir</span>
+    </a>
 
-        <article class="producto-card">
-            <div class="imagen-wrapper">
-                <img src="https://images.unsplash.com/photo-1567581935884-3349723552ca?q=80&w=500" alt="Smartphone 3">
-            </div>
-            <div class="info">
-                <h3>Google Pixel 8</h3>
-                <p class="precio">$799.00</p>
-                <button>Ver detalles</button>
-                 <button>Comprar</button>
-            </div>
-        </article>
+    <div id="inicio"></div>
 
-        <article class="producto-card">
-            <div class="imagen-wrapper">
-                <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80&w=500" alt="Smartphone 4">
+    <main>
+        <section id="productos">
+            <div class="catalogo-container">
+                <article class="producto-card" data-id="1" data-nombre="Samsung Galaxy S23" data-precio="899.00">
+                    <div class="imagen-wrapper">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=500"
+                            alt="Samsung Galaxy S23">
+                    </div>
+                    <div class="info">
+                        <h3>Samsung Galaxy S23</h3>
+                        <p class="precio">$899.00</p>
+
+                        <div class="cantidad-control">
+                            <button class="btn-menos">-</button>
+                            <span class="cant-item">0</span>
+                            <button class="btn-mas">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto-card" data-id="2" data-nombre="iPhone 15 Pro" data-precio="999.00">
+                    <div class="imagen-wrapper">
+                        <img src="https://images.unsplash.com/photo-1592890288564-76628a30a657?q=80&w=500"
+                            alt="iPhone 15 Pro">
+                    </div>
+                    <div class="info">
+                        <h3>iPhone 15 Pro</h3>
+                        <p class="precio">$999.00</p>
+                        <div class="cantidad-control">
+                            <button class="btn-menos">-</button>
+                            <span class="cant-item">0</span>
+                            <button class="btn-mas">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto-card" data-id="3" data-nombre="Google Pixel 8" data-precio="799.00">
+                    <div class="imagen-wrapper">
+                        <img src="https://images.unsplash.com/photo-1567581935884-3349723552ca?q=80&w=500"
+                            alt="Google Pixel 8">
+                    </div>
+                    <div class="info">
+                        <h3>Google Pixel 8</h3>
+                        <p class="precio">$799.00</p>
+                        <div class="cantidad-control">
+                            <button class="btn-menos">-</button>
+                            <span class="cant-item">0</span>
+                            <button class="btn-mas">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto-card" data-id="4" data-nombre="Xiaomi 13 Ultra" data-precio="1100.00">
+                    <div class="imagen-wrapper">
+                        <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80&w=500"
+                            alt="Xiaomi 13 Ultra">
+                    </div>
+                    <div class="info">
+                        <h3>Xiaomi 13 Ultra</h3>
+                        <p class="precio">$1,100.00</p>
+                        <div class="cantidad-control">
+                            <button class="btn-menos">-</button>
+                            <span class="cant-item">0</span>
+                            <button class="btn-mas">+</button>
+                        </div>
+                    </div>
+                </article>
             </div>
-            <div class="info">
-                <h3>Xiaomi 13 Ultra</h3>
-                <p class="precio">$1,100.00</p>
-                <button>Ver detalles</button>
-                 <button>Comprar</button>
-            </div>
-        </article>
-    </main>
-    </section>
-    
+        </section>
+
         <section id="multimedia">
             <h2>Los mejores celulares 2026</h2>
-           <iframe width="560" height="315"  src="https://www.youtube.com/embed/JSLHXNq6coo?si=DQatzECV4bjd8Shd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
-         </section>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JSLHXNq6coo?si=DQatzECV4bjd8Shd"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
 
+        <section id="resenas">
+            <div class="grid-resenas">
+                <article class="card-resena">
+                    <div class="usuario">
+                        <img src="https://i.pravatar.cc/150?u=juan" alt="Usuario 1">
+                        <div>
+                            <h4>Juan Pérez</h4>
+                            <span class="estrellas">★★★★★</span>
+                        </div>
+                    </div>
+                    <p>"El iPhone 15 llegó impecable. La entrega fue súper rápida en Buenos Aires. Muy conforme con la
+                        garantía."</p>
+                    <span class="fecha">Publicado hace 2 días</span>
+                </article>
 
-         <section id="resenas">
-         <div class="grid-resenas">
-            <article class="card-resena">
-                <div class="usuario">
-                    <img src="https://i.pravatar.cc/150?u=juan" alt="Usuario 1">
-                    <div>
-                        <h4>Juan Pérez</h4>
-                        <span class="estrellas">★★★★★</span>
+                <article class="card-resena">
+                    <div class="usuario">
+                        <img src="https://i.pravatar.cc/150?u=ana" alt="Usuario 2">
+                        <div>
+                            <h4>Ana García</h4>
+                            <span class="estrellas">★★★★☆</span>
+                        </div>
                     </div>
-                </div>
-                <p>"El iPhone 15 llegó impecable. La entrega fue súper rápida en Buenos Aires. Muy conforme con la garantía."</p>
-                <span class="fecha">Publicado hace 2 días</span>
-            </article>
-    
-            <article class="card-resena">
-                <div class="usuario">
-                    <img src="https://i.pravatar.cc/150?u=ana" alt="Usuario 2">
-                    <div>
-                        <h4>Ana García</h4>
-                        <span class="estrellas">★★★★☆</span>
-                    </div>
-                </div>
-                <p>"Excelente el Samsung S23. El único detalle fue que el correo tardó un día más de lo esperado, pero el soporte técnico me atendió de diez."</p>
-                <span class="fecha">Publicado hace 1 semana</span>
-            </article>
-    
-            <article class="card-resena destaque">
-                <div class="usuario">
-                    <img src="https://i.pravatar.cc/150?u=lucas" alt="Usuario 3">
-                    <div>
-                        <h4>Lucas M.</h4>
-                        <span class="estrellas">★★★★★</span>
-                    </div>
-                </div>
-                <p>"Compré el Google Pixel y es una nave. La mejor tienda para comprar celulares online, precios imbatibles."</p>
-                <span class="fecha">Publicado hace 3 días</span>
-            </article>
-    
-            <article class="card-resena">
-                <div class="usuario">
-                    <img src="https://i.pravatar.cc/150?u=carla" alt="Usuario 4">
-                    <div>
-                        <h4>Carla Rojas</h4>
-                        <span class="estrellas">★★★★★</span>
-                    </div>
-                </div>
-                <p>"Segunda vez que compro aquí. El sistema de pago es muy seguro y los equipos son 100% originales."</p>
-                <span class="fecha">Publicado hace 1 mes</span>
-            </article>
-        </div>
-    </section>
+                    <p>"Excelente el Samsung S23. El único detalle fue que el correo tardó un día más de lo esperado,
+                        pero el soporte técnico me atendió de diez."</p>
+                    <span class="fecha">Publicado hace 1 semana</span>
+                </article>
 
-    <section id="contacto" class="seccion-contacto">
-        <div class="contacto-header">
-            <h2>Contacto</h2>
-            <p>¿Tienes dudas sobre un equipo o el envío? Escríbenos.</p>
-        </div>
-    
-        <div class="contacto-container">
-            
-            <form action="https://formspree.io/f/mnnqqlnl" method="POST" class="formulario">
-                <div class="grupo-input">
-                    <label for="nombre">Nombre Completo</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
-                </div>
-    
-                <div class="grupo-input">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
-                </div>
-    
-                <div class="grupo-input">
-                    <label for="celular">Modelo de interés (Opcional)</label>
-                    <select id="celular" name="modelo_interes">
-                        <option value="consulta_general">Consulta General</option>
-                        <option value="iphone_15">iPhone 15 Pro</option>
-                        <option value="samsung_s23">Samsung S23 Ultra</option>
-                        <option value="motorola_edge">Motorola Edge 40</option>
-                    </select>
-                </div>
-    
-                <div class="grupo-input">
-                    <label for="mensaje">Tu Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
-                </div>
-    
-                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
-            </form>
-        </div>
-    </section>
+                <article class="card-resena destaque">
+                    <div class="usuario">
+                        <img src="https://i.pravatar.cc/150?u=lucas" alt="Usuario 3">
+                        <div>
+                            <h4>Lucas M.</h4>
+                            <span class="estrellas">★★★★★</span>
+                        </div>
+                    </div>
+                    <p>"Compre el Google Pixel y es una nave. La mejor tienda para comprar celulares online, precios
+                        imbatibles."</p>
+                    <span class="fecha">Publicado hace 3 días</span>
+                </article>
+
+                <article class="card-resena">
+                    <div class="usuario">
+                        <img src="https://i.pravatar.cc/150?u=carla" alt="Usuario 4">
+                        <div>
+                            <h4>Carla Rojas</h4>
+                            <span class="estrellas">★★★★★</span>
+                        </div>
+                    </div>
+                    <p>"Segunda vez que compro aquí. El sistema de pago es muy seguro y los equipos son 100%
+                        originales."</p>
+                    <span class="fecha">Publicado hace 1 mes</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion-contacto">
+            <div class="contacto-header">
+                <h2>Contacto</h2>
+                <p>¿Tienes dudas sobre un equipo o el envío? Escríbenos.</p>
+            </div>
+
+            <div class="contacto-container">
+                <form action="https://formspree.io/f/mnnqqlnl" method="POST" class="formulario">
+                    <div class="grupo-input">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Fernandez Mariana"
+                            pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+"
+                            title="El nombre solo debe contener letras y espacios, no números." required>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="celular">Modelo de interés (Opcional)</label>
+                        <select id="celular" name="modelo_interes">
+                            <option value="consulta_general">Consulta General</option>
+                            <option value="iphone_15">iPhone 15 Pro</option>
+                            <option value="samsung_s23">Samsung S23 Ultra</option>
+                            <option value="motorola_edge">Motorola Edge 40</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="mensaje">Tu Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026  - Todos los derechos reservados.</p>
+        <p>&copy; 2026 - Todos los derechos reservados.</p>
     </footer>
 
+       
 </body>
-</html>">Nombre:</label>
-                <input type="text"
+
+</html>
